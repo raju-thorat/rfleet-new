@@ -8,7 +8,6 @@ spec:
       app: redis
       role: master
       tier: backend
-      abc: xyz
   replicas: 1
   template:
     metadata:
@@ -16,14 +15,13 @@ spec:
         app: redis
         role: master
         tier: backend
-        abc: xyz
     spec:
       containers:
       - name: master
         image: redis
         resources:
           requests:
-            cpu: 100m
+            cpu: 101m
             memory: 100Mi
         ports:
         - containerPort: 6379
