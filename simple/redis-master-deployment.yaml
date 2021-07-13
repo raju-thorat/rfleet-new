@@ -16,6 +16,7 @@ spec:
         app: redis
         role: master
         tier: backend
+        abc: xyz
     spec:
       containers:
       - name: master
