@@ -6,10 +6,6 @@ metadata:
     app: nginx2
   name: nginx2
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx2
   strategy: {}
   template:
     metadata:
