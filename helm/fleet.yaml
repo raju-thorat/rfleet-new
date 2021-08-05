@@ -1,4 +1,4 @@
-namespace: defaultNamespace
+namespace: default
 
 # Custom helm options
 helm:
