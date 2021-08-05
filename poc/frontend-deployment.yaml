@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  selector:
+    matchLabels:
+      app: guestbook
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: guestbook
+        tier: frontend
+        test: test123
+    spec:
+      containers:
+      - name: php-redis
+        image: gcr.io/google-samples/gb-frontend:v4
+        resources:
+          limits:
+            memory: "200Mi"
+            cpu: 200m
+          requests:
+            memory: "100Mi"
+            cpu: 100m
+        ports:
+        - containerPort: 80
