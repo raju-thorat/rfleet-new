@@ -1,12 +1,16 @@
+allowVolumeExpansion: false
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: standard
-provisioner: kubernetes.io/aws-ebs
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    manager: agent
+  name: test1
 parameters:
+  encrypted: "true"
+  fsType: ext4
+  iopsPerGB: "0"
   type: gp2
-reclaimPolicy: Retain
-allowVolumeExpansion: true
-mountOptions:
-  - debug
+provisioner: kubernetes.io/aws-ebs
+reclaimPolicy: Delete
 volumeBindingMode: Immediate
