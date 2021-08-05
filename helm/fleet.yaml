@@ -1,4 +1,4 @@
-namespace: fleet-helm-example
+namespace: defaultNamespace
 
 # Custom helm options
 helm:
