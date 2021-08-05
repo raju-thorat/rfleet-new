@@ -8,7 +8,7 @@ metadata:
   uid: b4952dc3-d670-11e5-8cd0-68f728db1985
 data:
   game.properties: |
-    enemies=aliens
+    enemies=aliens1
     lives=3
     enemies.cheat=true
     enemies.cheat.level=noGoodRotten
